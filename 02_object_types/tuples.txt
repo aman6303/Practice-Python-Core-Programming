@@ -1,0 +1,54 @@
+>>> tea_types = ("Black", "Green", "Oolong")
+>>> tea_types
+('Black', 'Green', 'Oolong')
+>>> tea_types[0
+... ]
+'Black'
+>>> tea_types[-1]
+'Oolong'
+>>> tea_types[1:]
+('Green', 'Oolong')
+>>> tea_types[0] = "Lemon"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    tea_types[0] = "Lemon"
+    ~~~~~~~~~^^^
+TypeError: 'tuple' object does not support item assignment
+>>> len(tea_types)
+3
+>>> more_tea = ("Herbal", "Earl Grey")
+>>> all_tea = more_tea + tea_types
+>>> all_tea
+('Herbal', 'Earl Grey', 'Black', 'Green', 'Oolong')
+>>> if "Green" in all_tea:
+...     print("i have gree tea")
+...
+i have gree tea
+>>> more_tea = ("Herbal", "Earl Grey", "Herbal")
+>>> more_tea.count("Herbal")
+2
+>>>
+>>> a = (1, 2, 3, 4)
+>>> b = (1, 2, 3, 4)
+>>> id(a)
+2014240579536
+>>> id(b)
+2014240579616
+>>> # tuple is immutable but python doesn't do any type of optimization if we assign similar value to two different tuples
+>>> # (Different from integers and strings)
+>>>
+>>> tea_types
+('Black', 'Green', 'Oolong')
+>>> (black, green, oolong) = tea_types
+>>> black
+'Black'
+>>> green
+'Green'
+>>> oolong
+'Oolong'
+>>> # tuple unpacking
+>>>
+>>> type(tea_types)
+<class 'tuple'>
+>>>
+>>> # tuple can contain tuples
